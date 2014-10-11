@@ -6,10 +6,10 @@ function initNumPool()
 		$numbers = range($r[0], $r[1]);
 		shuffle($numbers);
 		return $numbers;
-	}, [
-		[1, 9], [10, 19], [20, 29], [30, 39], [40, 49],
-		[50, 59], [60, 69], [70, 79], [80, 90]
-	]);
+	}, array(
+		array(1, 9), array(10, 19), array(20, 29), array(30, 39), array(40, 49),
+		array(50, 59), array(60, 69), array(70, 79), array(80, 90)
+	));
 }
 
 function generateColMask($colNum, $maskCount, &$colMask, &$rowState)
@@ -75,7 +75,7 @@ function generateCard(&$numPool, &$colMask)
 
 function createCardSet()
 {
-	$cards = [];
+	$cards = array();
 	$numPool = initNumPool();
 	$colMask = initColMask();
 

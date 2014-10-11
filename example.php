@@ -14,7 +14,7 @@ header('Content-Type: text/html; charset=UTF-8');
 		<?php foreach ($card as $line): ?>
 			<tr>
 				<?php foreach ($line as $num): ?>
-					<td width="20px"><?= ($num ? $num : '') ?></td>
+					<td width="20px"><?php echo ($num ? $num : '') ?></td>
 				<?php endforeach; ?>
 			</tr>
 		<?php endforeach; ?>
